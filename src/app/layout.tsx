@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#f8f9fb] antialiased">
+      <body className="bg-gradient-to-br from-[#f8f9fb] via-[#e8ecf3] to-[#f3f4f6] antialiased">
         {/* Navigation */}
         <nav className="bg-white border-b-2 border-[#002576] sticky top-0 z-50 shadow-lg backdrop-blur-sm bg-opacity-98">
           <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">

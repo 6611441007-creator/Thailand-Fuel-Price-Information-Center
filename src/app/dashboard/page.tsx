@@ -4,8 +4,9 @@ import Link from "next/link";
 
 export default function DashboardPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f8f9fb] via-[#f3f4f6] to-[#e1e2e4]">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-[#f8f9fb] via-[#e8ecf3] to-[#f3f4f6]">
+      <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;utf8,<svg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M30 0v60M0 30h60\' stroke=\'%23002576\' fill=\'none\'/></svg>')] bg-repeat"></div>
+      <div className="relative max-w-7xl mx-auto px-6 py-12">
         <div className="space-y-8">
           <div>
             <h1 className="text-6xl font-black text-[#002576] font-['Plus_Jakarta_Sans'] drop-shadow-lg tracking-tighter">
@@ -22,7 +23,7 @@ export default function DashboardPage() {
               <button
                 key={fuel}
                 onClick={() => alert(`ราคา ${fuel}`)}
-                className="bg-[#ffffff] rounded-xl p-6 shadow-sm hover:shadow-lg hover:border-[#002576] transition-all active:scale-95 text-left cursor-pointer border border-[#e1e2e4]"
+                className="bg-white rounded-2xl p-7 shadow-md hover:shadow-2xl hover:scale-105 hover:border-[#002576] transition-all active:scale-95 text-left cursor-pointer border border-[#e1e2e4] group"
               >
                 <p className="text-sm font-bold text-[#444653] font-['Prompt'] tracking-tight">
                   {fuel}
@@ -40,7 +41,7 @@ export default function DashboardPage() {
               <button
                 key={fuel}
                 onClick={() => alert(`ราคา ${fuel}`)}
-                className="bg-[#ffffff] rounded-xl p-6 shadow-sm hover:shadow-lg hover:border-[#002576] transition-all active:scale-95 text-left cursor-pointer border border-[#e1e2e4]"
+                className="bg-white rounded-2xl p-7 shadow-md hover:shadow-2xl hover:scale-105 hover:border-[#002576] transition-all active:scale-95 text-left cursor-pointer border border-[#e1e2e4] group"
               >
                 <p className="text-sm font-bold text-[#444653] font-['Prompt'] tracking-tight">
                   {fuel}
@@ -61,6 +62,13 @@ export default function DashboardPage() {
           </Link>
         </div>
       </div>
+      <footer className="relative border-t border-[#e1e2e4] bg-white bg-opacity-50 backdrop-blur-sm mt-12">
+        <div className="max-w-7xl mx-auto px-6 py-8 text-center">
+          <p className="text-xs text-[#444653] font-['Prompt'] tracking-wide">
+            FuelHub - ชื่อแม่ ชื่อหลัก ชื่อตงค ชื่ออู่
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

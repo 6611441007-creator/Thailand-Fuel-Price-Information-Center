@@ -4,8 +4,9 @@ import Link from "next/link";
 
 export default function SiamFuelFlowPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f8f9fb] via-[#f3f4f6] to-[#e1e2e4]">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-[#f8f9fb] via-[#e8ecf3] to-[#f3f4f6]">
+      <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;utf8,<svg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M30 0v60M0 30h60\' stroke=\'%23002576\' fill=\'none\'/></svg>')] bg-repeat"></div>
+      <div className="relative max-w-7xl mx-auto px-6 py-12">
         <div className="space-y-8">
           <div>
             <h1 className="text-6xl font-black text-[#002576] font-['Plus_Jakarta_Sans'] drop-shadow-lg tracking-tighter">
@@ -18,7 +19,7 @@ export default function SiamFuelFlowPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Supply Overview */}
-            <div className="bg-white rounded-xl p-8 shadow-md border border-[#e1e2e4]">
+            <div className="bg-white rounded-2xl p-8 shadow-md border border-[#e1e2e4] hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold text-[#002576] mb-6 font-['Prompt'] tracking-wide">
                 📦 ภาพรวมการจัดหาสมดซำ
               </h3>
@@ -55,7 +56,7 @@ export default function SiamFuelFlowPage() {
             </div>
 
             {/* Regional Data */}
-            <div className="bg-white rounded-xl p-8 shadow-md border border-[#e1e2e4]">
+            <div className="bg-white rounded-2xl p-8 shadow-md border border-[#e1e2e4] hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold text-[#002576] mb-6 font-['Prompt'] tracking-wide">
                 🗺️ การจำหน่ายตามขุม-uภูมิภาภส์
               </h3>
@@ -80,6 +81,13 @@ export default function SiamFuelFlowPage() {
           </Link>
         </div>
       </div>
+      <footer className="relative border-t border-[#e1e2e4] bg-white bg-opacity-50 backdrop-blur-sm mt-12">
+        <div className="max-w-7xl mx-auto px-6 py-8 text-center">
+          <p className="text-xs text-[#444653] font-['Prompt'] tracking-wide">
+            FuelHub - ภาคควาจมน้ายผลงสูทร
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
