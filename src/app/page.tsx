@@ -12,7 +12,10 @@ export default function Home() {
             <h1 className="text-6xl md:text-7xl font-bold text-[#1a1a1a] font-['Plus_Jakarta_Sans'] leading-tight drop-shadow-sm">
               ศูนย์ข้อมูลราคาเชื้อเพลิงแห่งประเทศไทย
             </h1>
-            <p className="text-xl text-[#555555] mt-6 font-['Prompt'] max-w-3xl leading-relaxed font-medium tracking-normal">
+            <p className="text-lg text-[#555555] mt-4 font-['Prompt'] max-w-3xl leading-relaxed font-medium tracking-normal">
+              (FuelHub)
+            </p>
+            <p className="text-xl text-[#555555] mt-4 font-['Prompt'] max-w-3xl leading-relaxed font-medium tracking-normal">
               แพลตฟอร์มติดตามราคาเชื้อเพลิงสมัยเรียล โดยใช้ข้อมูลจากกรรมาการของสถานีเชื้อเพลิง
             </p>
           </div>
@@ -63,7 +66,7 @@ export default function Home() {
       <footer className="relative border-t-2 border-[#ddd] bg-[#f5f5f5] mt-20">
         <div className="max-w-7xl mx-auto px-6 py-8 text-center">
           <p className="text-sm text-[#1a1a1a] font-['Prompt'] tracking-normal font-medium leading-relaxed">
-            ศูนย์ข้อมูลราคาเชื้อเพลิงแห่งประเทศไทย
+            ศูนย์ข้อมูลราคาเชื้อเพลิงแห่งประเทศไทย (FuelHub)
           </p>
           <p className="text-xs text-[#666666] font-['Prompt'] mt-2 tracking-normal font-normal leading-relaxed">
             ข้อมูลที่แสดงบนเว็บไซต์นี้เป็นข้อมูลตัวอย่างเพื่อการศึกษา © 2026 All Rights Reserved.
