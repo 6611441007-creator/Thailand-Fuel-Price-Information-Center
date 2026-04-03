@@ -9,10 +9,10 @@ export default function SiamFuelFlowPage() {
       <div className="relative max-w-7xl mx-auto px-6 py-12">
         <div className="space-y-8">
           <div>
-            <h1 className="text-6xl font-black text-[#002576] font-['Plus_Jakarta_Sans'] drop-shadow-lg tracking-tighter">
+            <h1 className="text-6xl font-bold text-[#002576] font-['Plus_Jakarta_Sans'] drop-shadow-lg tracking-tight leading-normal">
               🔄 ระบบจำหน่ายเชื้อเพลิง
             </h1>
-            <p className="text-base text-[#191c1e] mt-3 font-['Prompt'] font-medium tracking-wide">
+            <p className="text-base text-[#191c1e] mt-3 font-['Prompt'] font-normal tracking-normal leading-relaxed">
               ภาพรวมที่มาซีมวา และการจะหน่าย
             </p>
           </div>

@@ -12,7 +12,7 @@ export default function Home() {
             <h1 className="text-7xl md:text-8xl font-black text-[#002576] font-['Plus_Jakarta_Sans'] leading-tight tracking-tighter drop-shadow-lg">
               ศูนย์ข้อดมูลราคาเชื้อเพลิงแห่งประเทศไทย
             </h1>
-            <p className="text-lg md:text-xl text-[#191c1e] mt-8 font-['Prompt'] max-w-3xl leading-relaxed font-medium tracking-wide">
+            <p className="text-lg md:text-xl text-[#191c1e] mt-8 font-['Prompt'] max-w-3xl leading-relaxed font-semibold tracking-normal">
               แพลตฟอร์มการจัดการราคาเชื้อเพลิงส่วนตวหชค & เชืื่อหมบราคาแต่งริงฐาน
             </p>
           </div>
@@ -21,13 +21,13 @@ export default function Home() {
           <div className="flex items-center gap-4 pt-6 flex-wrap">
             <Link
               href="/dashboard"
-              className="bg-gradient-to-r from-[#002576] to-[#0038a8] text-white px-8 py-4 rounded-xl font-bold font-['Prompt'] text-base hover:shadow-xl hover:scale-105 transition-all active:scale-95 cursor-pointer shadow-lg"
+              className="bg-gradient-to-r from-[#002576] to-[#0038a8] text-white px-8 py-4 rounded-xl font-semibold font-['Prompt'] text-sm hover:shadow-xl hover:scale-105 transition-all active:scale-95 cursor-pointer shadow-lg uppercase tracking-wide"
             >
               📊 ดูแดชบอร์ด
             </Link>
             <Link
               href="/siam-fuel-flow"
-              className="border-2 border-[#002576] text-[#002576] px-8 py-4 rounded-xl font-bold font-['Prompt'] text-base hover:bg-white hover:shadow-lg hover:scale-105 transition-all active:scale-95 cursor-pointer bg-white"
+              className="border-2 border-[#002576] text-[#002576] px-8 py-4 rounded-xl font-semibold font-['Prompt'] text-sm hover:bg-white hover:shadow-lg hover:scale-105 transition-all active:scale-95 cursor-pointer bg-white uppercase tracking-wide"
             >
               🔄 ระบบจำหน่าย
             </Link>
@@ -36,7 +36,7 @@ export default function Home() {
           {/* Feature Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-16">
             {[
-              { title: '💰 ราคาเชื้อเพลิง', desc: 'ข้อมูลราคาสมัยเรียล จาก ปตชถา', link: '/alerts', emoji: '💰' },
+              { title: '💰 ราคาเชื้อเพลิง', desc: 'ข้อมูลราคาสมัยเรียล จาก ปตท', link: '/alerts', emoji: '💰' },
               { title: '🔔 การแจ้งเตือน', desc: 'รับแจ้งเตือนสัฃชุตคำ', link: '/alerts', emoji: '🔔' },
               { title: '📍 หาสถานีบริการ', desc: 'ค้นหาสถานีเชื้อเพลิงใกล้', link: '/stations', emoji: '📍' },
               { title: '📈 แนวโน้มฉิภาค', desc: 'วิเคระห์หรือราค 30 วัน', link: '/trends', emoji: '📈' },
@@ -49,10 +49,10 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#002576] to-[#0038a8] opacity-0 group-hover:opacity-5 transition-opacity"></div>
                 <div className="relative">
                   <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{feature.emoji}</div>
-                  <h3 className="text-lg font-bold text-[#002576] font-['Prompt'] group-hover:text-[#0038a8] transition-colors tracking-wide">
+                  <h3 className="text-lg font-semibold text-[#002576] font-['Prompt'] group-hover:text-[#0038a8] transition-colors tracking-wide leading-normal">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-[#191c1e] mt-3 font-['Prompt'] leading-relaxed font-medium tracking-wide">
+                  <p className="text-sm text-[#191c1e] mt-3 font-['Prompt'] leading-relaxed font-normal tracking-normal">
                     {feature.desc}
                   </p>
                   <div className="mt-4 text-[#002576] group-hover:translate-x-2 transition-transform inline-block">→</div>
@@ -64,10 +64,10 @@ export default function Home() {
       </div>
       <footer className="relative border-t border-[#e1e2e4] bg-white bg-opacity-50 backdrop-blur-sm mt-20">
         <div className="max-w-7xl mx-auto px-6 py-12 text-center">
-          <p className="text-sm text-[#191c1e] font-['Prompt'] tracking-wide">
+          <p className="text-sm text-[#191c1e] font-['Prompt'] tracking-normal font-semibold leading-relaxed">
             ศูนย์ข้อมูลราคาเชื้อเพลิงแห่งประเทศไทย © 2026 All Rights Reserved.
           </p>
-          <p className="text-xs text-[#444653] font-['Prompt'] mt-2 tracking-wide">
+          <p className="text-xs text-[#444653] font-['Prompt'] mt-3 tracking-normal font-normal leading-relaxed">
             Powered by FuelHub - Real-time Fuel Price Intelligence
           </p>
         </div>
