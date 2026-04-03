@@ -9,15 +9,26 @@ export default function Home() {
       <div className="relative max-w-7xl mx-auto px-6 py-24">
         <div className="space-y-12">
           <div className="max-w-3xl">
-            <h1 className="text-6xl md:text-7xl font-bold text-[#1a1a1a] font-['Plus_Jakarta_Sans'] leading-tight drop-shadow-sm">
-              ศูนย์ข้อมูลราคาเชื้อเพลิงแห่งประเทศไทย
-            </h1>
-            <p className="text-lg text-[#555555] mt-4 font-['Prompt'] max-w-3xl leading-relaxed font-medium tracking-normal">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-16 h-16 bg-gradient-to-br from-[#002576] to-[#0038a8] rounded-full flex items-center justify-center shadow-lg">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C12 2 6 8 6 14c0 3.314 2.686 6 6 6s6-2.686 6-6c0-6-6-12-6-12z"/>
+              </svg>
+            </div>
+            <div>
+              <h1 className="text-6xl md:text-7xl font-bold text-[#1a1a1a] font-['Plus_Jakarta_Sans'] leading-tight drop-shadow-sm">
+                ศูนย์ข้อมูลราคาเชื้อเพลิงแห่งประเทศไทย
+              </h1>
+            </div>
+          </div>
+          <div className="mb-8">
+            <p className="text-lg text-[#555555] font-['Prompt'] max-w-3xl leading-relaxed font-medium tracking-normal">
               (FuelHub)
             </p>
             <p className="text-xl text-[#555555] mt-4 font-['Prompt'] max-w-3xl leading-relaxed font-medium tracking-normal">
               แพลตฟอร์มติดตามราคาเชื้อเพลิงสมัยเรียล โดยใช้ข้อมูลจากกรรมาการของสถานีเชื้อเพลิง
             </p>
+          </div>
           </div>
 
           {/* CTA Buttons */}

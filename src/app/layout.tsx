@@ -18,12 +18,19 @@ export default function RootLayout({
         {/* Navigation */}
         <nav className="bg-white border-b-2 border-[#002576] sticky top-0 z-50 shadow-lg backdrop-blur-sm bg-opacity-98">
           <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <Link href="/" className="flex flex-col gap-0 hover:opacity-80 transition-opacity">
-              <div className="text-2xl font-bold text-[#002576] font-['Plus_Jakarta_Sans'] tracking-tight">
-                ศูนย์ข้อมูลราคาเชื้อเพลิง
+            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#002576] to-[#0038a8] rounded-full flex items-center justify-center shadow-md">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C12 2 6 8 6 14c0 3.314 2.686 6 6 6s6-2.686 6-6c0-6-6-12-6-12z"/>
+                </svg>
               </div>
-              <div className="text-xs text-[#555555] font-['Prompt'] font-semibold tracking-widest uppercase">
-                FuelHub
+              <div className="flex flex-col gap-0">
+                <div className="text-lg font-bold text-[#002576] font-['Plus_Jakarta_Sans'] tracking-tight leading-tight">
+                  ศูนย์ข้อมูล
+                </div>
+                <div className="text-xs text-[#555555] font-['Prompt'] font-semibold tracking-widest uppercase">
+                  FuelHub
+                </div>
               </div>
             </Link>
             <div className="flex items-center space-x-8 font-['Prompt']">
