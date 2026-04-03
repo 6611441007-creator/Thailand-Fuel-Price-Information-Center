@@ -1,0 +1,87 @@
+name: Dependency Updates
+
+on:
+  schedule:
+    # Check for updates weekly on Monday at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  update-dependencies:
+    name: Check and Update Dependencies
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: npm
+      
+      - name: Update dependencies
+        run: |
+          npm update
+          npm audit fix --audit-level=moderate
+      
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Create Pull Request
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore: update dependencies'
+          title: 'chore: bump dependencies'
+          body: |
+            ## Automated Dependency Updates
+            
+            This PR contains automatic updates to project dependencies.
+            
+            Please review the changes:
+            - ✅ Run `npm install` to test locally
+            - ✅ Run `npm run build` to verify build
+            - ✅ Run `npm run lint` to check code quality
+            
+            **Note:** These updates have been automatically generated. Manual verification is recommended before merging.
+          branch: chore/update-dependencies
+          delete-branch: true
+          labels: |
+            dependencies
+            automated
+
+  npm-outdated:
+    name: Report Outdated Packages
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: npm
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Check outdated packages
+        run: npm outdated
+        continue-on-error: true
