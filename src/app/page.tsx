@@ -8,7 +8,6 @@ export default function Home() {
       <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;utf8,<svg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M30 0v60M0 30h60\' stroke=\'%23002576\' fill=\'none\'/></svg>')] bg-repeat"></div>
       <div className="relative max-w-7xl mx-auto px-6 py-24">
         <div className="space-y-12">
-          <div className="max-w-3xl">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 bg-gradient-to-br from-[#002576] to-[#0038a8] rounded-full flex items-center justify-center shadow-lg">
               <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -28,7 +27,6 @@ export default function Home() {
             <p className="text-xl text-[#555555] mt-4 font-['Prompt'] max-w-3xl leading-relaxed font-medium tracking-normal">
               แพลตฟอร์มติดตามราคาเชื้อเพลิงสมัยเรียล โดยใช้ข้อมูลจากกรรมาการของสถานีเชื้อเพลิง
             </p>
-          </div>
           </div>
 
           {/* CTA Buttons */}
